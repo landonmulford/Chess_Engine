@@ -13,13 +13,10 @@ std::vector<vector<int>> King::generateMoves(Piece* board[8][8]) const{
             if(posN+i>-1&&posN+i<8&&posL+j>-1&&posL+j<8){
             if(board[posN+i][posL+j]==nullptr||board[posN+i][posL+j]->color!=this->color){
                 result.push_back({posN+i,posL+j});
-              //addMoves(posN+i,posL+j);
             }
             }
           }
         }
-        
-        //if(a){editMoves(board);}
       
     return result;
 }
