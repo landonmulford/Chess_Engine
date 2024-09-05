@@ -223,15 +223,17 @@ public:
     Position* newPosition(Piece* a,vector<int> x) const;
 //random function that determines or not whether a tree will be explored, heavy bias towards positions that appear better after one move
     bool rand(int rank, int total, bool white);
-
+//generates piece based on type and position
     Piece* generatePiece(char c, int posN, int posL);
+//creates a list of legal moves, returns false if none exist
     bool generateUnsortedPositions();
+//adds potential white castles to list of legal moves
     void whiteCastle();
+//adds potential white castles to list of legal moves
     void blackCastle();
+//adds potential enPassant to list of legal moves
     void enPassant();
 
-    
-    
 };
 
 
