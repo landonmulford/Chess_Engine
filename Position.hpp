@@ -207,15 +207,23 @@ public:
     
    
     
-    
+//checks whether a position is checkmate
     bool isCheckMate();
+//outputs position
     void display();
+//checks if position is check
     bool isCheck();
+//returns eval of a given position
     double getEval();
+//creates an ordered map of positions based on eval
     void generateSortedPositions();
+//recommends next move by recursively sorting positions through DFS, then returning the best 
     tuple<double, Position*> recommend(int currentDepth=0);
+//returns newly created position from a piece passed and where it moves to
     Position* newPosition(Piece* a,vector<int> x) const;
+//random function that determines or not whether a tree will be explored, heavy bias towards positions that appear better after one move
     bool rand(int rank, int total, bool white);
+
     Piece* generatePiece(char c, int posN, int posL);
     bool generateUnsortedPositions();
     void whiteCastle();
