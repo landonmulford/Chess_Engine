@@ -11,14 +11,16 @@
 #include <stdio.h>
 class Queen: public Piece{
 public:
-    
-    Queen(bool color1, int posN, int posL) : Piece(color1,posN,posL){
+     //constructor
+    Queen(bool color1, int posN, int posL) : Piece(color1, posN,posL){
     }
-    int getValue();
+    //creates copy
     Piece* makeCopy();
-    //maybe get rid of legal moves and just return generateMoves for memory reasons
-    //for now its void cause of addMoves
+    //returns material value
+    int getValue();
+    //returns vector of legal moves
     std::vector<vector<int>> generateMoves(Piece* board[8][8]) const;
+    //returns type as a char (for displaying)
     char getType();
 };
 #endif /* Queen_hpp */
