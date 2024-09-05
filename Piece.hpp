@@ -13,6 +13,9 @@ using namespace std;
 
 class Piece{
 public:
+    bool color;
+    int posL;
+    int posN;
     Piece();
     Piece(bool color1, int pos11, int pos21){
         color=color1;
@@ -20,9 +23,6 @@ public:
         posL=pos21;
     };
     virtual int getValue();
-    bool color;
-    int posL;
-    int posN;
     virtual Piece* makeCopy();
     virtual char getType();
     virtual vector<vector<int>> generateMoves(Piece* board[8][8]) const;
