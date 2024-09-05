@@ -210,13 +210,10 @@ public:
     
     bool isCheckMate();
     void display();
-    bool makeMove(int n1, int l1, int n2, int l2);
-    bool go();
     bool isCheck();
     double getEval();
     void generateSortedPositions();
     tuple<double, Position*> recommend(int currentDepth=0);
-    double getMaxEval();
     Position* newPosition(Piece* a,vector<int> x) const;
     bool rand(int rank, int total, bool white);
     Piece* generatePiece(char c, int posN, int posL);
