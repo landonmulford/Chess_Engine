@@ -14,14 +14,17 @@
 class Pawn: public Piece{
 public:
     
-    Pawn(bool color1, int posN, int posL) : Piece(color1,posN,posL){
-    };
+    //constructor
+    Pawn(bool color1, int posN, int posL) : Piece(color1, posN,posL){
+    }
+    //creates copy
     Piece* makeCopy();
+    //returns material value
     int getValue();
-    char getType();
-    //maybe get rid of legal moves and just return generateMoves for memory reasons
-    //for now its void cause of addMoves
+    //returns vector of legal moves
     std::vector<vector<int>> generateMoves(Piece* board[8][8]) const;
+    //returns type as a char (for displaying)
+    char getType();
         
 };
 #endif /* Pawn_hpp */
