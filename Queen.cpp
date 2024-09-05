@@ -11,12 +11,12 @@ std::vector<vector<int>> Queen::generateMoves(Piece* board[8][8]) const{
     int i=1;
         while(posN+i<8){
           if(board[posN+i][posL]==nullptr){
-            //addMoves(posN+i, posL);
+            
               result.push_back({posN+i, posL});
             i++;
           }
           else if(board[posN+i][posL]->color!=this->color){
-            //addMoves(posN+i, posL);
+          
             result.push_back({posN+i, posL});
             break;
           }
@@ -25,12 +25,12 @@ std::vector<vector<int>> Queen::generateMoves(Piece* board[8][8]) const{
         i=1;
         while(posN-i>-1){
           if(board[posN-i][posL]==nullptr){
-            //addMoves(posN-i, posL);
+       
               result.push_back({posN-i, posL});
             i++;
           }
           else if(board[posN-i][posL]->color!=this->color){
-            //addMoves(posN-i, posL);
+           
               result.push_back({posN-i, posL});
             break;
           }
@@ -39,12 +39,12 @@ std::vector<vector<int>> Queen::generateMoves(Piece* board[8][8]) const{
         i=1;
         while(posL+i<8){
           if(board[posN][posL+i]==nullptr){
-            //addMoves(posN, posL+i);
+           
               result.push_back({posN, posL+i});
             i++;
           }
           else if(board[posN][posL+i]->color!=this->color){
-            //addMoves(posN, posL+i);
+    
               result.push_back({posN, posL+i});
             break;
           }
@@ -53,12 +53,12 @@ std::vector<vector<int>> Queen::generateMoves(Piece* board[8][8]) const{
         i=1;
         while(posL-i>-1){
           if(board[posN][posL-i]==nullptr){
-            //addMoves(posN, posL-i);
+          
             result.push_back({posN, posL-i});
             i++;
           }
           else if(board[posN][posL-i]->color!=this->color){
-            //addMoves(posN, posL-i);
+     
             result.push_back({posN, posL-i});
             break;
           }
@@ -67,12 +67,12 @@ std::vector<vector<int>> Queen::generateMoves(Piece* board[8][8]) const{
         i=1;
         while(posN+i<8&&posL+i<8){
           if(board[posN+i][posL+i]==nullptr){
-            //addMoves(posN+i, posL+i);
+     
             result.push_back({posN+i, posL+i});
             i++;
           }
           else if(board[posN+i][posL+i]->color!=this->color){
-            //addMoves(posN+i, posL+i);
+        
             result.push_back({posN+i, posL+i});
             break;
           }
@@ -80,14 +80,14 @@ std::vector<vector<int>> Queen::generateMoves(Piece* board[8][8]) const{
         }
         i=1;
         while(posN+i<8&&posL-i>=0){
-          //System.out.println("Hi");
+    
           if(board[posN+i][posL-i]==nullptr){
-            //addMoves(posN+i, posL-i);
+       
             result.push_back({posN+i, posL-i});
             i++;
           }
           else if(board[posN+i][posL-i]->color!=this->color){
-            //addMoves(posN+i, posL-i);
+     
             result.push_back({posN+i, posL-i});
             break;
           }
@@ -96,12 +96,12 @@ std::vector<vector<int>> Queen::generateMoves(Piece* board[8][8]) const{
         i=1;
         while(posN-i>=0&&posL+i<8){
           if(board[posN-i][posL+i]==nullptr){
-            //addMoves(posN-i, posL+i);
+
             result.push_back({posN-i, posL+i});
             i++;
           }
           else if(board[posN-i][posL+i]->color!=this->color){
-            //addMoves(posN-i, posL+i);
+       
             result.push_back({posN-i, posL+i});
             break;
           }
@@ -110,12 +110,12 @@ std::vector<vector<int>> Queen::generateMoves(Piece* board[8][8]) const{
         i=1;
         while(posN-i>=0&&posL-i>=0){
           if(board[posN-i][posL-i]==nullptr){
-            //addMoves(posN-i, posL-i);
+ 
             result.push_back({posN-i, posL-i});
             i++;
           }
           else if(board[posN-i][posL-i]->color!=this->color){
-            //addMoves(posN-i, posL-i);
+         
             result.push_back({posN-i, posL-i});
             break;
           }
@@ -123,7 +123,7 @@ std::vector<vector<int>> Queen::generateMoves(Piece* board[8][8]) const{
         
 
         }
-        //if(a){editMoves(board);}
+   
     return result;
     
 }
