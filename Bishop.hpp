@@ -11,12 +11,15 @@
 #include <stdio.h>
 class Bishop: public Piece{
 public:
-    
+    //constructor
     Bishop(bool color1, int posN, int posL) : Piece(color1,posN,posL){
     }
     int getValue();
+    //creates copy
     Piece* makeCopy();
+    //returns vector of legal moves
     std::vector<vector<int>> generateMoves(Piece* board[8][8]) const;
+    //returns type as a char (for displaying)
     char getType();
 };
 #endif /* Bishop_hpp */
