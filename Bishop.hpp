@@ -16,8 +16,6 @@ public:
     }
     int getValue();
     Piece* makeCopy();
-    //maybe get rid of legal moves and just return generateMoves for memory reasons
-    //for now its void cause of addMoves
     std::vector<vector<int>> generateMoves(Piece* board[8][8]) const;
     char getType();
 };
